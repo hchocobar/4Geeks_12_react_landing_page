@@ -1,16 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-
-//include images into your bundle
-
-//create your first component
-const Navbar = () => {
+const Navbar = (props) => {
 	return (
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img src="https://chocobar.net/hcht" alt="Logo" width="30" height="30" className="d-inline-block align-text-top"/>
-            <span className="p-2">Bootstrap</span>
+          <a className="navbar-brand" href={props.logoHref}>
+            <img src={props.logoURL} alt={props.logoAlt} width="35" height="35" className="d-inline-block align-text-top"/>
+            <span className="p-2">{props.logoTitle}</span>
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -19,13 +16,13 @@ const Navbar = () => {
           <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <a className="nav-link active" aria-current="page" href={props.item1URL}>{props.item1Text}</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
+                <a className="nav-link" href={props.item2URL}>{props.item2Text}</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
+                <a className="nav-link" href={props.item3URL}>{props.item3Text}</a>
               </li>
             </ul>
           </div>
@@ -34,5 +31,30 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+Navbar.propTypes = {
+  logoHref: PropTypes.string, 
+  logoURL: PropTypes.string,
+  logAlt: PropTypes.string,
+  logoTitle: PropTypes.string,
+  item1URL: PropTypes.string,
+  item1Text: PropTypes.string,
+  item2URL: PropTypes.string,
+  item2Text: PropTypes.string,
+  item3URL: PropTypes.string,
+  item3Text: PropTypes.string,
+};
 
+Navbar.defaultProps = {
+  logoHref: "https://chocobar.net/",
+  logoURL: "https://chocobar.net/hcht",
+  logAlt: "Hector Chocobar-Torrejon",
+  logoTitle: "Hector Chocobar-Torrejon",
+  item1URL: "#",
+  item1Text: "Home",
+  item2URL: "#",
+  item2Text: "Link",
+  item3URL: "#",
+  item3Text: "Blog",
+};
+
+export default Navbar;
