@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
 const Navbar = (props) => {
 	return (
       <nav className="navbar navbar-expand-lg bg-light">
@@ -31,6 +32,7 @@ const Navbar = (props) => {
 	);
 };
 
+
 Navbar.propTypes = {
   logoHref: PropTypes.string, 
   logoURL: PropTypes.string,
@@ -44,9 +46,10 @@ Navbar.propTypes = {
   item3Text: PropTypes.string,
 };
 
+
 Navbar.defaultProps = {
   logoHref: "https://chocobar.net/",
-  logoURL: "https://chocobar.net/hcht",
+  logoURL: "https://chocobar.net/hcht-uk",
   logAlt: "Hector Chocobar-Torrejon",
   logoTitle: "Hector Chocobar-Torrejon",
   item1URL: "#",
@@ -56,5 +59,6 @@ Navbar.defaultProps = {
   item3URL: "#",
   item3Text: "Blog",
 };
+
 
 export default Navbar;

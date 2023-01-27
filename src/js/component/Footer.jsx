@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
 const Footer = (props) => {
 	return (
 		<div className="text-center">
@@ -12,7 +13,6 @@ const Footer = (props) => {
             </a>
             <span className="mb-3 mb-md-0 text-muted">© 2022 {props.logoTitle}</span>
           </div>
-
           <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li className="ms-3"><a className="text-muted" target="_blank" href={props.githubURL}><i class="fab fa-2x fa-github"></i></a></li>
             <li className="ms-3"><a className="text-muted" target="_blank" href={props.linkedinURL}><i class="fab fa-2x fa-linkedin"></i></a></li>
@@ -24,6 +24,7 @@ const Footer = (props) => {
 	);
 };
 
+
 Footer.propTypes = {
   logoHref: PropTypes.string, 
   logoURL: PropTypes.string,
@@ -34,6 +35,7 @@ Footer.propTypes = {
   stackoverflowURL: PropTypes.string,
 };
 
+
 Footer.defaultProps = {
   logoHref: "https://chocobar.net/",
   logoURL: "https://chocobar.net/hcht",
@@ -43,5 +45,6 @@ Footer.defaultProps = {
   linkedinURL: "https://www.linkedin.com/in/hector-chocobar/",
   stackoverflowURL: "https://stackoverflow.com/users/18981955/hector-chocobar-torrejon",
 };
+
 
 export default Footer;

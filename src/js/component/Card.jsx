@@ -27,7 +27,7 @@ Card.propTypes = {
 
 Card.defaultProps = {
   imageURL: "https://chocobar.net/hcht",
-  imageAlt: "",
+  imageAlt: "Logo de Héctor Chocobar-Torrejón",
   cardTitle: "Card title",
   cardDescription: "Some quick example text to build on the card title and make up the bulk of the card's content.",
   buttonURL: "#",

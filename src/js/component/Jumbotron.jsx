@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
 const Jumbotron = (props) => {
 	return (
 		<div className="text-start">
@@ -15,6 +16,7 @@ const Jumbotron = (props) => {
 	);
 };
 
+
 Jumbotron.propTypes = {
   jumbotronTitle: PropTypes.string,
   jumbotronDescription: PropTypes.string,
@@ -22,11 +24,13 @@ Jumbotron.propTypes = {
   buttonText: PropTypes.string,
 };
 
+
 Jumbotron.defaultProps = {
   jumbotronTitle: "Custom jumbotron",
   jumbotronDescription: "Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.",
   buttonURL: "#",
   buttonText: "Example button"
 };
+
 
 export default Jumbotron;
