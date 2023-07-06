@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import logo from "../../img/logo-hcht-uk.jpg";
 
 const Navbar = (props) => {
 	return (
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href={props.logoHref}>
+          <a className="navbar-brand" target="_blank" href={props.logoHref}>
             <img src={props.logoURL} alt={props.logoAlt} width="35" height="35" className="d-inline-block align-text-top"/>
             <span className="p-2">{props.logoTitle}</span>
           </a>
@@ -49,7 +50,7 @@ Navbar.propTypes = {
 
 Navbar.defaultProps = {
   logoHref: "https://chocobar.net/",
-  logoURL: "https://chocobar.net/hcht-uk",
+  logoURL: logo,
   logAlt: "Hector Chocobar-Torrejon",
   logoTitle: "Hector Chocobar-Torrejon",
   item1URL: "#",
