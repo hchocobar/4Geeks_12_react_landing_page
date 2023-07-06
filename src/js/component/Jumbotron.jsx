@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 
 const Jumbotron = (props) => {
-	return (
-		<div className="text-start">
+  return (
+    <div className="text-start">
       <div className="p-5 mb-4 bg-dark rounded-3">
         <div className="container-fluid py-5">
           <h1 className="display-5 fw-bold text-warning">{props.jumbotronTitle}</h1>
@@ -12,10 +12,17 @@ const Jumbotron = (props) => {
           <a href={props.buttonURL} className="btn btn-warning btn-lg" type="button">
             {props.buttonText}
           </a>
+          <hr className="text-secondary"/>
+          <div class="card-footer text-muted mt-4">
+            <p>
+              This and many other projects are built by students as part of the{" "} 
+              <span className="text-warning">4Geeks Academy Coding Bootcamp</span>.
+            </p>
+          </div>
         </div>
       </div>
-		</div>
-	);
+    </div>
+  );
 };
 
 
